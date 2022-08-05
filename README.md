@@ -7,7 +7,7 @@ A brief workflow for Dart/Rust interop.
 ## References
 
 - Rust side
-  - 
+  - https://github.com/eqrion/cbindgen/blob/master/docs.md
 - Dart side
   - https://dart.dev/guides/libraries/c-interop#interfacing-with-native-types
   - https://docs.flutter.dev/development/packages-and-plugins/developing-packages
