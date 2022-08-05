@@ -1,0 +1,11 @@
+language = "C"
+
+cpp_compat = true
+include_guard = "_ADDER_H_"
+
+[parse]
+parse_deps = false
+clean = false
+
+[parse.expand]
+crates = ["adder"]
