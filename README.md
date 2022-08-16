@@ -34,7 +34,8 @@ $ cargo install cbindgen
 
 # In case of M1 mac
 $ rustup toolchain install nightly-aarch64-apple-darwin
-$ brew install llvm
+$ brew install llvm # for OSX
+$ sudo apt-get install libclang-dev # for Debian/Ubuntu
 ```
 
 <br/>
@@ -230,3 +231,30 @@ Finally run the dart file:
 ```sh
 $ dart run lib/main.dart
 ```
+
+<br/>
+
+## For Warp and Warp-dart
+
+The path of the repos:
+- Warp should be located under $HOME/$REPOS/Rust.
+- Warp-Dart should be located under $HOME/$REPOS.
+- This is because the build.rs of Warp specifies the path.
+
+We use the nightly version of Rust. To regenerate the warp.h file:
+```sh
+$ cd $WARP_REPO
+$ rustup nightly
+$ cargo clean 
+$ cargo build --features build-headers # see the build.rs file
+```
+
+LLVM is required for Dart ffigen. To regenerate the warp_dart_bindings_generated.dart:
+```sh
+$ cd $WARP_DART_REPO
+$ dart run ffigen --config ffigen.yaml # see the yaml file
+``` 
+
+The ffigen.yaml file should be changed to specify the path of LLVM (libclang.so) depends on the OS (Win, Mac, or Linux).
+
+
