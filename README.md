@@ -246,7 +246,7 @@ We use the nightly version of Rust. To regenerate the warp.h file:
 $ cd $WARP_REPO
 $ rustup nightly
 $ cargo clean 
-$ cargo build --features build-headers # see the build.rs file
+$ cargo build --features build-header # see the build.rs file
 ```
 
 LLVM is required for Dart ffigen. To regenerate the warp_dart_bindings_generated.dart:
