@@ -237,7 +237,7 @@ $ dart run lib/main.dart
 ## For Warp and Warp-dart
 
 The path of the repos:
-- Warp should be located under $HOME/$REPOS/Rust.
+- Warp should be located under $HOME/$REPOS.
 - Warp-Dart should be located under $HOME/$REPOS.
 - This is because the build.rs of Warp specifies the path.
 
@@ -253,7 +253,7 @@ $ cargo build --features build-header # see the build.rs file
 LLVM is required for Dart ffigen. To regenerate the warp_dart_bindings_generated.dart:
 ```sh
 $ cd $WARP_DART_REPO
-$ dart run ffigen --config ffigen.yaml # see the yaml file
+$ dart run ffigen --config ffigen.yaml # see the yaml file if need to change the entry points as well as LLVM path.
 ``` 
 
 The ffigen.yaml file should be changed to specify the path of LLVM (libclang.so) depends on the OS (Win, Mac, or Linux).
