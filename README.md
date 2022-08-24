@@ -245,6 +245,7 @@ We use the nightly version of Rust. To regenerate the warp.h file:
 ```sh
 $ cd $WARP_REPO
 $ rustup nightly
+$ rustup default nightly
 $ cargo clean 
 $ cargo build --features build-header # see the build.rs file
 ```
